@@ -178,12 +178,18 @@ const dress_length = (orgnizedData) => {
 /// loading a result as a table
 let loadResult = (result) => {
     console.log(result);
+    let data;
+    if (result[0] === "drezhy-qol") {
+        data = ["درێژی قۆڵ", result[1]];
+    } else if (result[0] === "drezhy tanwra") {
+        data = ["درێژی تەنورە", result[1]];
+    }
 
     let createRow = document.createElement("tr");
     let createCul1 = document.createElement("td");
-    createCul1.innerHTML = result[0];
+    createCul1.innerHTML = data[0];
     let createCul2 = document.createElement("td");
-    createCul2.innerHTML = result[1];
+    createCul2.innerHTML = data[1];
 
     createRow.append(createCul1);
     createRow.append(createCul2);
