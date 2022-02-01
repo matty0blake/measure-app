@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <title>measure</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="data-output">
+            <h2 class="testHead">ئەنجامەکان</h2>
+
+            <div class="output-table">
+                <table id="data-table"></table>
+            </div>
+        </div>
+
+        <div class="data-inpt">
+            <select name="dress-type" id="dress-type" class="basic-data">
+                <optgroup label="مۆدێل">
+                    <option value="azi">عەزی</option>
+                    <option value="aba_shan">عابای سەرشان</option>
+                    <option value="aba_sar">عابای سەر سەر</option>
+                </optgroup>
+            </select>
+
+            <input
+                id="inpt-hight"
+                class="basic-data weight"
+                type="text"
+                inputmode="numberic"
+                placeholder="hight"
+                maxlength="3"
+            />
+            <input
+                id="inpt-weight"
+                class="basic-data hight"
+                type="text"
+                inputmode="numberic"
+                placeholder="weight"
+                maxlength="3"
+            />
+
+            <button id="btn-data-submit" class="basic-data">پێوانە کردن</button>
+        </div>
+    </body>
+
+    <script src="./app.js"></script>
+</html>
