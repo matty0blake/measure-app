@@ -87,7 +87,7 @@ const azi = (orgnizedData) => {
     }
 };
 
-const aba_sar = (orgnizedData) => {
+const aba_shan = (orgnizedData) => {
     switch (true) {
         case orgnizedData.hight >= 150 && orgnizedData.hight < 155:
             loadResult(["drezhy-qol", 68]);
@@ -124,7 +124,7 @@ const aba_sar = (orgnizedData) => {
     }
 };
 
-const aba_shan = (orgnizedData) => {
+const aba_sar = (orgnizedData) => {
     switch (true) {
         case orgnizedData.hight >= 150 && orgnizedData.hight < 155:
             loadResult(["drezhy-qol", 83]);
