@@ -44,6 +44,7 @@ btn_data_submit.addEventListener("click", () => {
             break;
     }
     dress_length(orgnizedData);
+    loadResult(["jiawazy", cosHight.value - cosWeight.value - 100]);
 });
 
 const azi = (orgnizedData) => {
@@ -183,7 +184,10 @@ let loadResult = (result) => {
         data = ["درێژی قۆڵ", result[1]];
     } else if (result[0] === "drezhy tanwra") {
         data = ["درێژی تەنورە", result[1]];
-    }
+    }else if(result[0] === "jiawazy"){
+data = ["جیاوازی کێش بۆ باڵا",result[1]]
+
+}
 
     let createRow = document.createElement("tr");
     let createCul1 = document.createElement("td");
