@@ -67,15 +67,15 @@ const azi = (orgnizedData) => {
 
         case orgnizedData.hight >= 160 && orgnizedData.hight < 170:
             if (orgnizedData.hightToWeight <= 30) {
-                loadResult(["drezhy-qol", 60]);
-            } else {
                 loadResult(["drezhy-qol", 61]);
+            } else {
+                loadResult(["drezhy-qol", 62]);
             }
             break;
 
         case orgnizedData.hight >= 170 && orgnizedData.hight < 180:
             if (orgnizedData.hightToWeight <= 30) {
-                loadResult(["drezhy-qol", 62]);
+                loadResult(["drezhy-qol", 63]);
             } else {
                 loadResult(["drezhy-qol", 64]);
             }
