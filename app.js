@@ -25,7 +25,7 @@ btn_data_submit.addEventListener("click", () => {
     };
     orgnizedData.hight = Number(cosHight.value);
     orgnizedData.weight = Number(cosWeight.value);
-    orgnizedData.hightToWeight = cosHight.value - cosWeight.value - 100;
+    orgnizedData.hightToWeight = (cosHight.value - cosWeight.value - 100)*-1;
     orgnizedData.dressType = cosDressType.value;
 
     console.log(typeof orgnizedData.dressType);
@@ -44,13 +44,27 @@ btn_data_submit.addEventListener("click", () => {
             break;
     }
     dress_length(orgnizedData);
-    loadResult(["jiawazy", cosHight.value - cosWeight.value - 100]);
+
+    if(orgnizedData.hightToWeight < 0 ){
+    loadResult(["jiawazy", orgnizedData.hightToWeight *-1 + "  -  کەمترە    " ]);
+    }else{
+        loadResult(["jiawazy", orgnizedData.hightToWeight     +" - زیاترە  " ]);
+    }
+    
+    console.log("here")
+
+    console.log(orgnizedData)
+
+    let a = orgnizedData.hightToWeight
+    console.log(typeof a )
+    console.log(a)
+    console.log(a <= -  30)
 });
 
 const azi = (orgnizedData) => {
     switch (true) {
         case orgnizedData.hight >= 150 && orgnizedData.hight < 155:
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 58]);
             } else {
                 loadResult(["drezhy-qol", 59]);
@@ -59,7 +73,7 @@ const azi = (orgnizedData) => {
             break;
         case orgnizedData.hight >= 155 && orgnizedData.hight < 160:
             console.log("the heigh is between 155 to 160");
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 59]);
             } else {
                 loadResult(["drezhy-qol", 60]);
@@ -67,15 +81,16 @@ const azi = (orgnizedData) => {
             break;
 
         case orgnizedData.hight >= 160 && orgnizedData.hight < 170:
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 61]);
+               
             } else {
                 loadResult(["drezhy-qol", 62]);
             }
             break;
 
         case orgnizedData.hight >= 170 && orgnizedData.hight < 180:
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 63]);
             } else {
                 loadResult(["drezhy-qol", 64]);
@@ -95,8 +110,7 @@ const aba_shan = (orgnizedData) => {
 
             break;
         case orgnizedData.hight >= 155 && orgnizedData.hight < 160:
-            console.log("the heigh is between 155 to 160");
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 70]);
             } else {
                 loadResult(["drezhy-qol", 71]);
@@ -104,7 +118,7 @@ const aba_shan = (orgnizedData) => {
             break;
 
         case orgnizedData.hight >= 160 && orgnizedData.hight < 170:
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 72]);
             } else {
                 loadResult(["drezhy-qol", 73]);
@@ -112,7 +126,7 @@ const aba_shan = (orgnizedData) => {
             break;
 
         case orgnizedData.hight >= 170 && orgnizedData.hight < 180:
-            if (orgnizedData.hightToWeight <= 30) {
+            if (orgnizedData.hightToWeight < 30) {
                 loadResult(["drezhy-qol", 74]);
             } else {
                 loadResult(["drezhy-qol", 75]);
@@ -132,7 +146,7 @@ const aba_sar = (orgnizedData) => {
 
             break;
         case orgnizedData.hight >= 155 && orgnizedData.hight < 160:
-            loadResult(["drezhy_tanwra", 85]);
+            loadResult(["drezhy-qol", 85]);
             break;
 
         case orgnizedData.hight >= 160 && orgnizedData.hight < 170:
